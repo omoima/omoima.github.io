@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title if title else 'Oraaabz' }}</title>
+    <meta name="description" content="Oarabile Moima's public-facing GitHub Pages site.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+        // Check for saved dark mode preference or use system preference
+        const currentTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (currentTheme === 'dark' || (!currentTheme && systemPrefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <header class="site-header glassmorphism">
+            <div class="container header-inner">
+                <a href="/" class="site-title">Oraaabz</a>
+                <nav class="site-nav">
+                    <a href="/" class="nav-link">Essays</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-content">
+            <div class="container fade-in">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container container-footer">
+                <p>&copy; 2026 Oarabile Moima. Built with Python.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/omoima">GitHub</a>
+                    <a href="https://twitter.com/oraaabz">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post-full fade-in">
+    <header class="post-header text-center">
+        <div class="post-meta">
+            <span class="post-date">{{ post.date.strftime('%B %d, %Y') if post.date else '' }}</span>
+            {% if post.tags %}
+            <span class="post-tags-container">
+            {% for tag in post.tags %}
+                <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+            </span>
+            {% endif %}
+        </div>
+        <h1 class="post-title-main">{{ post.title }}</h1>
+        {% if post.description %}
+            <p class="post-subtitle">{{ post.description }}</p>
+        {% endif %}
+    </header>
+
+    <div class="post-body">
+        {{ post.content | safe }}
+    </div>
+    
+    <div class="post-footer">
+        <a href="/" class="back-link"><span class="arrow">&larr;</span> Back to Essays</a>
+    </div>
+</article>
+{% endblock %}

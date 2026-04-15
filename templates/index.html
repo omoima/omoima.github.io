@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section text-center fade-in delay-1">
+    <h1 class="hero-title">Technology, Engineering & Finance</h1>
+    <p class="hero-subtitle">Thanks for visiting!</p>
+</section>
+
+<section class="posts-grid fade-in delay-2">
+    {% for post in posts %}
+    <article class="post-card">
+        <a href="{{ post.url }}" class="post-card-link">
+            <div class="post-card-content">
+                <span class="post-meta">{{ post.date.strftime('%B %d, %Y') if post.date else '' }}</span>
+                <h2 class="post-title">{{ post.title }}</h2>
+                <p class="post-excerpt">{{ post.description if post.description else 'Read more about this topic inside.' }}</p>
+                <div class="post-read-more">Read Article <span class="arrow">&rarr;</span></div>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %}
