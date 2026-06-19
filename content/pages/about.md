@@ -9,6 +9,7 @@ I was born and raised in Pretoria, South Africa.
 012 Pitori Mahlanyeng.
 Ngwana wa Patience le Hendrik.
 Brother to Tshomarelo.
+Partner to Ntando.
 
 I am a little reserved, but I am a lot of fun once you get to know me.
 A strong FC Barcelona fan!
