@@ -3,7 +3,7 @@ title: About Me
 ---
 
 ## My name is Oarabile Moima.
-### It is pronounced as OOOO-AHH-RABI-LE...
+### It is pronounced as OOOO-AHH-RAAA-BIIII-LEE...
 
 I was born and raised in Pretoria, South Africa.
 012 Pitori Mahlanyeng.
