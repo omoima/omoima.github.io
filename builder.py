@@ -96,24 +96,6 @@ def build_site(project_dir):
     if os.path.exists(static_dir):
         shutil.copytree(static_dir, os.path.join(public_dir, 'static'))
 
-    # GitHub Pages user sites serve from the repository root by default.
-    # Keep root-level HTML in sync with the generated public/ artifact.
-    for filename in ('index.html', 'about.html'):
-        source_file = os.path.join(public_dir, filename)
-        if os.path.exists(source_file):
-            shutil.copy2(source_file, os.path.join(project_dir, filename))
-
-    public_posts_dir = os.path.join(public_dir, 'posts')
-    root_posts_dir = os.path.join(project_dir, 'posts')
-    if os.path.exists(public_posts_dir):
-        os.makedirs(root_posts_dir, exist_ok=True)
-        for filename in os.listdir(public_posts_dir):
-            if filename.endswith('.html'):
-                shutil.copy2(
-                    os.path.join(public_posts_dir, filename),
-                    os.path.join(root_posts_dir, filename)
-                )
-
 if __name__ == "__main__":
     current_dir = os.getcwd()
     print(f"Building site in {current_dir}...")
