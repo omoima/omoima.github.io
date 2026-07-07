@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oraaabz</title>
+    <meta name="description" content="Oarabile Moima's public-facing GitHub Pages site.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script>
+        // Check for saved dark mode preference or use system preference
+        const currentTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (currentTheme === 'dark' || (!currentTheme && systemPrefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <header class="site-header glassmorphism">
+            <div class="container header-inner">
+                <a href="/" class="site-title">Oraaabz</a>
+                <nav class="site-nav">
+                    <a href="/" class="nav-link">Essays</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-content">
+            <div class="container fade-in">
+                
+<article class="post-full fade-in">
+    <header class="post-header text-center">
+        <div class="post-meta">
+            <span class="post-date">April 12, 2026</span>
+            
+            <span class="post-tags-container">
+            
+                <span class="post-tag">Intro</span>
+            
+            </span>
+            
+        </div>
+        <h1 class="post-title-main">Oarabile Moima</h1>
+        
+            <p class="post-subtitle">A rap like intro...</p>
+        
+    </header>
+
+    <div class="post-body">
+        <p>As an engineer, one often seeks inspiration in the most rigid of domains: mathematics, physics, computing. But there is a profound structure in the natural world, specifically the sprawling, vibrant ecosystems of the African continent.</p>
+<h2>Inner Self</h2>
+<p>Listening to the inner voice that speaks to you.
+Some call it "intuition", others call it "gut feeling", others call it "the universe speaking to you".
+I say listen to that. That voice is your compass. It will guide you in the right direction.</p>
+<h2>Do not be afraid to be yourself.</h2>
+<p>Be yourself.
+Love broadly.
+Make mistakes.</p>
+<h2>Using MD files as my Notepads</h2>
+<p>I have always been a fan of using text files to jot down my thoughts. 
+From Notepad, to then Notepad++ and now Sublime Text.
+I enjoy doing this.
+Small, and feels just like paper where you can scribble and make edits.</p>
+    </div>
+    
+    <div class="post-footer">
+        <a href="/" class="back-link"><span class="arrow">&larr;</span> Back to Essays</a>
+    </div>
+</article>
+
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container container-footer">
+                <p>&copy; 2026 Oarabile Moima. Built with Python.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/omoima">GitHub</a>
+                    <a href="https://twitter.com/oraaabz">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+
+</html>
