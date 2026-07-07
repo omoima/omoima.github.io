@@ -15,7 +15,7 @@ My first love.
 
 The realest of the reals!!! 
 
-# Rest in peace
+## Rest in peace
 
 Oh mama I love you. Thank you.
 Rest in eternal peace, earth has been different since you have left.
@@ -80,6 +80,7 @@ I just turned 25 and we celebrated my birthday in the hospital.
 Sad times man.
 
 You taught us:
+
 - Stay close to GOD.
 - Always not be the focus.
 - Be humble.
