@@ -1,9 +1,9 @@
 ---
-title: Ma Top 20
+title: My Top 20
 date: 2026-07-12
 description: The book I started writing today.
 tags:
-  - Ma Top 20
+  - My Top 20
   - Book
   - Writing
 ---
